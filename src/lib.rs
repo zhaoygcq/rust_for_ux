@@ -26,7 +26,7 @@ enum Section {
 }
 
 #[wasm_bindgen]
-pub fn greet(html: &str) -> JsValue {
+pub fn compile(html: &str) -> JsValue {
     let mut res = vec![];
     let mut last_state = State::Pendding;
     let mut last_index = 0;
