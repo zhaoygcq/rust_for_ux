@@ -2,10 +2,13 @@
 name = "rust_for_ux"
 version = "0.1.0"
 edition = "2021"
+repository = "git@github.com:smallbrave/rust_for_ux.git"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [lib]
 crate-type = ["cdylib"]
 
 [dependencies]
-wasm-bindgen = "0.2"
+wasm-bindgen = { version = "0.2", features = ["serde-serialize"] }
+js-sys = "0.3.57"
+serde = { version = "1.0", features = ["derive"] }
